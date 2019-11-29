@@ -7,7 +7,7 @@ from pages.page_login import PageLogin
 
 
 class TestLogin(BaseTest):
-    def test_search_flight(self):
+    def test_login(self):
         self.driver.get(PageLogin.login_url)
 
         services.send_keys_by_xpath(self, PageLogin.login_mail_input, PageLogin.login_mail)
@@ -16,4 +16,6 @@ class TestLogin(BaseTest):
 
         services.assert_and_click(self, By.CSS_SELECTOR, PageLogin.login_submit)
 
-        assert self.driver.find_element_by_xpath(PageLogin.login_my_acc).text == "My Account"
+        assert services.get_text_by_xpath(self, PageLogin.login_my_acc) == "My Account"
+
+        services.assert_and_click(self, By.LINK_TEXT, PageLogin.login_logout)
