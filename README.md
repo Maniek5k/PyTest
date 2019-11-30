@@ -1,4 +1,4 @@
-#This repository contains tests of http://tutorialsninja.com/demo/ website.
+# This repository contains tests of http://tutorialsninja.com/demo/ website.
 
 All tests are written using PyTest framework, also tests includes custom info logging about every step.
 
