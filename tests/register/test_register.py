@@ -2,6 +2,7 @@ from selenium.webdriver.common.by import By
 
 from conftest import Base
 from conftest import services
+from pages.page_login import login
 from pages.page_register import register
 
 
@@ -31,4 +32,4 @@ class TestRegister(Base):
 
         services.assert_and_click(self, By.CSS_SELECTOR, register.register_success_continue)
 
-        services.assert_and_click(self, By.LINK_TEXT, register.register_logout)
+        login.check_logout(self)

@@ -14,11 +14,7 @@ class TestWishlistAdd(Base):
 
         services.send_keys_by_xpath(self, login.login_mail_input, wishlist.wishlist_mail)
 
-        services.send_keys_by_xpath(self, login.login_pwd_input, wishlist.wishlist_pwd)
-
-        services.assert_and_click(self, By.CSS_SELECTOR, login.login_submit)
-
-        services.assert_text(self, By.XPATH, login.login_my_acc, login.login_success)
+        login.check_login(self)
 
         self.driver.get(wishlist.wishlist_pp)
 
@@ -34,3 +30,5 @@ class TestWishlistAdd(Base):
         services.assert_and_click(self, By.CSS_SELECTOR, wishlist.wishlist_remove)
 
         services.assert_text(self, By.CSS_SELECTOR, wishlist.wishlist_rm_success, wishlist.wishlist_rm_text)
+
+        login.check_logout(self)

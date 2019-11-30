@@ -15,11 +15,7 @@ class TestCheckout(Base):
 
         services.send_keys_by_xpath(self, login.login_mail_input, checkout.checkout_mail)
 
-        services.send_keys_by_xpath(self, login.login_pwd_input, checkout.checkout_pwd)
-
-        services.assert_and_click(self, By.CSS_SELECTOR, login.login_submit)
-
-        services.assert_text(self, By.XPATH, login.login_my_acc, login.login_success)
+        login.check_login(self)
 
         self.driver.get(basket.basket_pp)
 
@@ -49,7 +45,5 @@ class TestCheckout(Base):
 
         self.driver.get(login.login_url)
 
-        services.assert_and_click(self, By.LINK_TEXT, login.login_logout)
-
-        services.assert_text(self, By.XPATH, login.logout_success, login.logout_success_text)
+        login.check_logout(self)
 

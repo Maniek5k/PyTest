@@ -9,7 +9,6 @@ Tests are run by PyTest automatically (to run just enter /tests folder and type 
 - Login - success
 - Login - failed (no user/pwd not match)
 - Login - forgotten password
-- Password change
 - Register
 - Register - checkbox missing
 - Search test (success + failed in one test)
@@ -19,3 +18,11 @@ Tests are run by PyTest automatically (to run just enter /tests folder and type 
 - Add to wishlist - failed, you have to be logged in
 - Add to basket
 - Add to basket - reorder previously ordered product
+- Account Tests:
+    - Add address
+    - Missing address
+    - Affiliate account changes
+    - Change customer data
+    - At least one address required
+    - Newsletter
+    - Password change
