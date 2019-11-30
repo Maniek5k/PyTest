@@ -51,4 +51,5 @@ class TestCheckout(Base):
 
         services.assert_and_click(self, By.LINK_TEXT, login.login_logout)
 
+        services.assert_text(self, By.XPATH, login.logout_success, login.logout_success_text)
 

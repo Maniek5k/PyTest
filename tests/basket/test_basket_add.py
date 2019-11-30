@@ -4,6 +4,7 @@ from selenium.webdriver.common.by import By
 
 from conftest import Base
 from conftest import services
+from pages.page_login import login
 from pages.page_basket import basket
 
 
@@ -24,4 +25,3 @@ class TestBasketAdd(Base):
         services.assert_and_click(self, By.CSS_SELECTOR, basket.basket_remove)
         time.sleep(1)
         services.assert_text(self, By.XPATH, basket.basket_empty, basket.basket_empty_text)
-
