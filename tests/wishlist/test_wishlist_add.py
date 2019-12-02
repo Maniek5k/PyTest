@@ -1,3 +1,5 @@
+# Test for adding to wishlist
+
 import time
 
 from selenium.webdriver.common.by import By

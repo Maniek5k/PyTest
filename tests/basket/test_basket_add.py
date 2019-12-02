@@ -1,3 +1,5 @@
+# Test for successful adding product to basket and checking if correct product was added
+
 import time
 
 from selenium.webdriver.common.by import By

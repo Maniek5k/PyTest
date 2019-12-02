@@ -1,3 +1,5 @@
+# Test checking for correct error if message is < 10 characters
+
 from selenium.webdriver.common.by import By
 
 from conftest import Base

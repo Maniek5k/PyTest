@@ -1,3 +1,5 @@
+# Test trying to add product, which cannot be added due to not all required options chosen
+
 import time
 
 from selenium.webdriver.common.by import By

@@ -1,3 +1,5 @@
+# Test checking for correct error message if checkbox on register form isn't checked
+
 from selenium.webdriver.common.by import By
 
 from conftest import Base

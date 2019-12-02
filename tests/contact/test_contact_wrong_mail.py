@@ -1,3 +1,5 @@
+# Test checking if correct error is displayed if mail isn't correct
+
 from selenium.webdriver.common.by import By
 
 from conftest import Base

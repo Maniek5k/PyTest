@@ -1,3 +1,5 @@
+# Test for checking checkout process with verification for error & success messages
+
 import time
 
 from selenium.webdriver.common.by import By

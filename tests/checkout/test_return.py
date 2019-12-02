@@ -1,4 +1,4 @@
-import time
+# Test for returning ordered product
 
 from selenium.webdriver.common.by import By
 

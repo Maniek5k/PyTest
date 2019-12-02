@@ -1,3 +1,5 @@
+# Test checking that contact form works correctly
+
 from selenium.webdriver.common.by import By
 
 from conftest import Base

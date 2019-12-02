@@ -1,3 +1,5 @@
+# Test for general registration checking
+
 from selenium.webdriver.common.by import By
 
 from conftest import Base

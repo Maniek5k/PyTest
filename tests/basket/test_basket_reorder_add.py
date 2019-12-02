@@ -1,3 +1,5 @@
+# Test for adding previously ordered product to basket
+
 import time
 
 from selenium.webdriver.common.by import By

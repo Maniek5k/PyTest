@@ -1,3 +1,5 @@
+# Test for adding gift card to basket
+
 import time
 
 from selenium.webdriver.common.by import By
