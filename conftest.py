@@ -52,8 +52,7 @@ class services:
             return False
 
     def send_keys_by_xpath(self, locator, keys):
-        LOGGER.info("Getting input %s" % locator)
-        LOGGER.info("Filling input with %s" % keys)
+        LOGGER.info("Filling input %s with %s" % (locator, keys))
         element = self.driver.find_element_by_xpath(locator)
         element.send_keys(keys)
         assert True
