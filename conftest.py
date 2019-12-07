@@ -1,10 +1,11 @@
+# File with all helper functions, used to execute operations on website.
+
 import random
 from telnetlib import EC
 
 import pytest
 from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException
-from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 import logging
 
@@ -51,6 +52,7 @@ class services:
             return False
 
     def send_keys_by_xpath(self, locator, keys):
+        LOGGER.info("Getting input %s" % locator)
         LOGGER.info("Filling input with %s" % keys)
         element = self.driver.find_element_by_xpath(locator)
         element.send_keys(keys)

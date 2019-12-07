@@ -17,7 +17,11 @@ Tests are run by PyTest automatically (to run just enter /tests folder and type 
 - Add to wishlist - success
 - Add to wishlist - failed, you have to be logged in
 - Add to basket
+- Add to basket - failed (select option required)
 - Add to basket - reorder previously ordered product
+- Add Gift Card to basket
+- Contact form test
+- Contact form (wrong mail & message too short tests)
 - Account Tests:
     - Add address
     - Missing address
