@@ -1,5 +1,3 @@
-from selenium.webdriver.common.by import By
-
 from conftest import Base
 from conftest import services
 from pages.page_login import login
