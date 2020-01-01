@@ -4,11 +4,10 @@ import time
 
 from selenium.webdriver.common.by import By
 
-from conftest import Base
-from conftest import services
+from conftest import Base, services
+from pages.page_basket import basket
 from pages.page_checkout import checkout
 from pages.page_login import login
-from pages.page_basket import basket
 
 
 class TestCheckout(Base):
