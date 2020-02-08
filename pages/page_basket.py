@@ -1,5 +1,5 @@
 class basket:
-    basket_pp = "http://tutorialsninja.com/demo/index.php?route=product/product&path=20&product_id=28"
+    basket_pp = "http://tutorialsninja.com/demo/index.php?route=product/product&product_id=29"
     basket_oos_pp = "http://tutorialsninja.com/demo/index.php?route=product/product&path=20_27&product_id=41"
     basket_name = 'div.col-sm-4 > h1'
     basket_add = '//*[@id="button-cart"]'

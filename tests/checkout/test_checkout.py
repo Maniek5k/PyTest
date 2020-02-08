@@ -3,7 +3,7 @@
 import time
 
 from selenium.webdriver.common.by import By
-
+import pytest
 from conftest import Base, services
 from pages.page_basket import basket
 from pages.page_checkout import checkout
@@ -11,6 +11,7 @@ from pages.page_login import login
 
 
 class TestCheckout(Base):
+    @pytest.mark.skip(reason="Checkout shouldn't be tested in a suite")
     def test_checkout(self):
         self.driver.get(login.login_url)
 
