@@ -1,5 +1,5 @@
 class basket:
-    basket_pp = "http://tutorialsninja.com/demo/index.php?route=product/product&product_id=40"
+    basket_pp = "http://tutorialsninja.com/demo/index.php?route=product/product&path=20&product_id=28"
     basket_name = 'div.col-sm-4 > h1'
     basket_add = '//*[@id="button-cart"]'
     basket_cart = '//*[@title="Shopping Cart"]'
@@ -35,5 +35,3 @@ class basket:
     basket_gc_success_text = "Account"
 
     basket_cannot_alert_text = "Select required!"
-
-

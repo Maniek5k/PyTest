@@ -47,4 +47,3 @@ class TestCheckout(Base):
         self.driver.get(login.login_url)
 
         login.check_logout(self)
-
