@@ -1,5 +1,6 @@
 class basket:
     basket_pp = "http://tutorialsninja.com/demo/index.php?route=product/product&path=20&product_id=28"
+    basket_oos_pp = "http://tutorialsninja.com/demo/index.php?route=product/product&path=20_27&product_id=41"
     basket_name = 'div.col-sm-4 > h1'
     basket_add = '//*[@id="button-cart"]'
     basket_cart = '//*[@title="Shopping Cart"]'
@@ -20,6 +21,8 @@ class basket:
     basket_gc_continue = 'Continue'
     basket_cannot_pp = "http://tutorialsninja.com/demo/index.php?route=product/product&product_id=30"
     basket_cannot_alert = 'div.text-danger'
+    basket_oos_product = 'div.alert-danger'
+    basket_oos_msg = "Products marked with *** are not available in the desired quantity or not in stock!\n×"
 
 
     reorder_mail = "emailer5k+reorder@gmail.com"

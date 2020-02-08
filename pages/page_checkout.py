@@ -23,4 +23,3 @@ class checkout:
 
     return_option_text = "You must select a return product reason!"
     return_success_text = "You will be notified via e-mail as to the status of your request."
-
