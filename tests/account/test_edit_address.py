@@ -25,7 +25,9 @@ class TestAddAddress(Base):
         services.send_keys_by_xpath(self, account.account_postcode, account.account_data_random)
 
         services.assert_and_click(self, By.CSS_SELECTOR, account.account_submit)
-        time.sleep(1)
+
+        services.is_element_visible(self, By.CSS_SELECTOR, account.account_success)
+
         services.assert_text(self, By.CSS_SELECTOR, account.account_success, account.account_edit_address_text)
 
         login.check_logout(self)

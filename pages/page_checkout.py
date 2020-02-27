@@ -11,6 +11,7 @@ class checkout:
     checkout_checkbox = 'agree'
     checkout_confirm = '//*[@id="button-confirm"]'
     checkout_order_placed = '//*[@id="content"]/h1'
+    checkout_placed_title = "Your order"
 
     checkout_alert_msg = "Warning: You must agree to the Terms & Conditions!\n×"
     checkout_order_placed_msg = "Your order has been placed!"

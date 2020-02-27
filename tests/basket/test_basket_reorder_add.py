@@ -29,7 +29,7 @@ class TestBasketReorder(Base):
         services.assert_and_click(self, By.XPATH, basket.basket_cart)
 
         services.assert_and_click(self, By.CSS_SELECTOR, basket.basket_remove)
-        time.sleep(1)
+
         services.is_element_visible(self, By.XPATH, basket.basket_empty)
 
         services.assert_text(self, By.XPATH, basket.basket_empty, basket.basket_empty_text)

@@ -24,7 +24,6 @@ class basket:
     basket_oos_product = 'div.alert-danger'
     basket_oos_msg = "Products marked with *** are not available in the desired quantity or not in stock!\n×"
 
-
     reorder_mail = "emailer5k+reorder@gmail.com"
     reorder_pwd = "12345"
     reorder_history = 'Order History'

@@ -1,9 +1,7 @@
 # Test for checking checkout process with verification for error & success messages
 
-import time
-
-from selenium.webdriver.common.by import By
 import pytest
+from selenium.webdriver.common.by import By
 from conftest import Base, services
 from pages.page_basket import basket
 from pages.page_checkout import checkout
@@ -26,23 +24,24 @@ class TestCheckout(Base):
         services.assert_and_click(self, By.XPATH, basket.basket_cart)
 
         services.assert_and_click(self, By.LINK_TEXT, checkout.checkout_btn)
-        time.sleep(1)
+
         services.assert_and_click(self, By.XPATH, checkout.checkout_payment)
-        time.sleep(1)
+
         services.assert_and_click(self, By.XPATH, checkout.checkout_shipping)
-        time.sleep(1)
+
         services.assert_and_click(self, By.XPATH, checkout.checkout_shipping_method)
-        time.sleep(1)
+
         services.assert_and_click(self, By.XPATH, checkout.checkout_payment_method)
-        time.sleep(1)
+
         services.assert_text(self, By.CSS_SELECTOR, checkout.checkout_alert_checkbox, checkout.checkout_alert_msg)
-        time.sleep(1)
+
         services.assert_and_click(self, By.NAME, checkout.checkout_checkbox)
-        time.sleep(1)
+
         services.assert_and_click(self, By.XPATH, checkout.checkout_payment_method)
-        time.sleep(1)
+
         services.assert_and_click(self, By.XPATH, checkout.checkout_confirm)
-        time.sleep(1)
+
+        services.wait_for_title(self, checkout.checkout_placed_title)
         services.assert_text(self, By.XPATH, checkout.checkout_order_placed, checkout.checkout_order_placed_msg)
 
         self.driver.get(login.login_url)

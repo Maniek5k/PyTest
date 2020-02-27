@@ -1,7 +1,5 @@
 # Test trying to add product, which cannot be added due to not all required options chosen
 
-import time
-
 from selenium.webdriver.common.by import By
 
 from conftest import Base
@@ -14,5 +12,6 @@ class TestBasketCannotAdd(Base):
         self.driver.get(basket.basket_cannot_pp)
 
         services.assert_and_click(self, By.XPATH, basket.basket_add)
-        time.sleep(1)
+
         services.assert_text(self, By.CSS_SELECTOR, basket.basket_cannot_alert, basket.basket_cannot_alert_text)
+

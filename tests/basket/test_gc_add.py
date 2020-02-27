@@ -34,5 +34,5 @@ class TestGcAdd(Base):
         services.assert_and_click(self, By.LINK_TEXT, basket.basket_gc_continue)
 
         services.assert_and_click(self, By.CSS_SELECTOR, basket.basket_remove)
-        time.sleep(1)
+
         services.assert_text(self, By.XPATH, basket.basket_empty, basket.basket_empty_text)

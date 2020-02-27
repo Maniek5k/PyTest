@@ -1,7 +1,4 @@
 # Test for successful adding product to basket and checking if correct product was added
-
-import time
-
 from selenium.webdriver.common.by import By
 
 from conftest import Base
@@ -24,5 +21,5 @@ class TestBasketAdd(Base):
         assert cart_name == pp_name
 
         services.assert_and_click(self, By.CSS_SELECTOR, basket.basket_remove)
-        time.sleep(1)
+
         services.assert_text(self, By.XPATH, basket.basket_empty, basket.basket_empty_text)

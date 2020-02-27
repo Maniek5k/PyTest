@@ -1,7 +1,5 @@
 # Test for adding to wishlist
 
-import time
-
 from selenium.webdriver.common.by import By
 
 from conftest import Base
@@ -21,7 +19,6 @@ class TestWishlistAdd(Base):
         self.driver.get(wishlist.wishlist_pp)
 
         services.assert_and_click(self, By.XPATH, wishlist.wishlist_add)
-        time.sleep(1)
 
         services.is_element_visible(self, By.CSS_SELECTOR, wishlist.wishlist_add_success)
 
