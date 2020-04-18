@@ -1,3 +1,4 @@
 pytest
+chrome
 selenium
 flake8
