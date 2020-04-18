@@ -15,7 +15,9 @@ LOGGER = logging.getLogger(__name__)
 @pytest.fixture(scope="class")
 def driver_init(request):
     from selenium import webdriver
-    driver = webdriver.Chrome()
+    options = webdriver.ChromeOptions()
+    options.add_argument('headless')
+    driver = webdriver.Chrome(chrome_options=options)
     request.cls.driver = driver
     driver.get("http://tutorialsninja.com/demo/")
     driver.implicitly_wait(10)
