@@ -10,5 +10,6 @@ RUN	webdrivermanager chrome --linkpath AUTO
 RUN	python3 -V
 RUN	chromedriver --version
 RUN	google-chrome-stable --version
+RUN cd pytest-selenium
 CMD PYTHONPATH=$PYTHONPATH:/usr/src/pytest \
     pytest tests/
