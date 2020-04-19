@@ -7,17 +7,13 @@ TAG=$(USERNAME)/$(MY_DOCKER_NAME)
 
 deps:
 	pip install -r requirements.txt
-	# wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-	# sudo apt install ./google-chrome-stable_current_amd64.deb
-	wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
-	echo "deb http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google.list
-	apt-get update -yqqq
-	apt-get install -y google-chrome-stable
+	wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+	sudo apt install ./google-chrome-stable_current_amd64.deb
 	webdrivermanager chrome --linkpath AUTO
+	apt-get install xvfb
 	python3 -V
 	chromedriver --version
 	google-chrome-stable --version
-
 lint:
 	flake8 hello_world test
 test:
