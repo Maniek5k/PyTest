@@ -7,12 +7,12 @@ install:
 script:
 - make lint
 # - make test
-    on:
-        branch: staging
-        condition: $TRAVIS_BRANCH = staging
+on:
+    branch: master
+    condition: $TRAVIS_BRANCH = master
 deploy:
 - make docker_build
 - make docker_push
-    on:
-        branch: master
-        condition: $TRAVIS_BRANCH = master
+on:
+    branch: master
+    condition: $TRAVIS_BRANCH = master
