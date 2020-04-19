@@ -5,5 +5,7 @@ ADD requirements.txt /tmp/requirements.txt
 RUN pip install -r /tmp/requirements.txt
 RUN mkdir -p $APP_DIR
 ADD tests/ $APP_DIR/tests/
+ADD pages/ ${APP_DIR}/pages/
+ADD conftest.py $APP_DIR/tests/
 CMD PYTHONPATH=$PYTHONPATH:/usr/src/pytest \
-    pytest ../pytest-selenium/tests/
+    pytest /usr/src/pytest-selenium/tests
