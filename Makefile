@@ -10,7 +10,7 @@ deps:
 	wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 	sudo apt install ./google-chrome-stable_current_amd64.deb
 	webdrivermanager chrome --linkpath AUTO
-	apt-get install xvfb
+	sudo apt-get install xvfb
 	python3 -V
 	chromedriver --version
 	google-chrome-stable --version
