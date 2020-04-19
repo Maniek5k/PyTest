@@ -9,6 +9,7 @@ deps:
 	pip install -r requirements.txt
 	# wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 	# sudo apt install ./google-chrome-stable_current_amd64.deb
+	sudo apt-get install -y chromium-browser
 	webdrivermanager chrome --linkpath AUTO
 	python3 -V
 	chromedriver --version
