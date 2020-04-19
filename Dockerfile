@@ -1,11 +1,11 @@
-FROM python:3.6
-ARG APP_DIR=/usr/src/pytest
+FROM python:3.8
+ARG APP_DIR=/usr/src/pytest-selenium
 WORKDIR /tmp
 ADD requirements.txt /tmp/requirements.txt
 RUN pip install -r /tmp/requirements.txt
 RUN mkdir -p $APP_DIR
 RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-RUN	sudo apt install ./google-chrome-stable_current_amd64.deb
+RUN	apt install ./google-chrome-stable_current_amd64.deb
 RUN	webdrivermanager chrome --linkpath AUTO
 RUN	python3 -V
 RUN	chromedriver --version
