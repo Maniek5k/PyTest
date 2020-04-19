@@ -7,7 +7,7 @@ RUN pip install -r /tmp/requirements.txt; \
     apt-get -y install libnss3; \
     wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb; \
     apt install -y ./google-chrome-stable_current_amd64.deb; \
-    webdrivermanager chrome --linkpath AUTO \
+    webdrivermanager chrome --linkpath AUTO; \
     apt-get -y install xvfb; \
     mkdir -p $APP_DIR
 ADD tests/ $APP_DIR/tests/; \
