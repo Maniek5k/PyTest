@@ -4,6 +4,7 @@ WORKDIR /tmp
 ADD requirements.txt /tmp/requirements.txt
 RUN pip install -r /tmp/requirements.txt
 RUN mkdir -p $APP_DIR
+RUN apt-get install libnss3-dev
 RUN webdrivermanager chrome --linkpath AUTO
 RUN python3 -V
 RUN chromedriver --version
