@@ -4,6 +4,11 @@ All tests are written using PyTest framework, also tests includes custom info lo
 
 Tests are run by PyTest automatically (to run just enter /tests folder and type in terminal: pytest)
 
+# Whole repository is available as DOCKER!
+
+To run it you need to run command, having your docker installed:
+    docker run maniek5k/pytest
+
 # At current state following tests are available:
 
 - Login - success
