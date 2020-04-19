@@ -1,4 +1,4 @@
 pytest
 selenium
-flake8
 webdrivermanager
+flake8
