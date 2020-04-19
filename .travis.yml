@@ -11,7 +11,7 @@ script:
 on:
     branch: staging
     condition: $TRAVIS_BRANCH = staging
-deploy:
+script:
 - make docker_push
 on:
     branch: master
