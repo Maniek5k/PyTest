@@ -10,8 +10,8 @@ RUN pip install -r /tmp/requirements.txt; \
     webdrivermanager chrome --linkpath AUTO; \
     apt-get -y install xvfb; \
     mkdir -p $APP_DIR
-ADD tests/ $APP_DIR/tests/; \
-    pages/ ${APP_DIR}/pages/; \
-    conftest.py $APP_DIR
+COPY tests/ $APP_DIR/tests/
+COPY pages/ ${APP_DIR}/pages/
+COPY conftest.py $APP_DIR
 CMD PYTHONPATH=$PYTHONPATH:/usr/src/pytest; \
     pytest /usr/src/pytest-selenium/tests
