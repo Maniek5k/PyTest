@@ -17,7 +17,7 @@ def driver_init(request):
     from selenium import webdriver
     options = webdriver.ChromeOptions()
     options.add_argument('headless')
-    driver = webdriver.Chrome(chrome_options=options)
+    driver = webdriver.Chrome(options=options)
     request.cls.driver = driver
     driver.get("http://tutorialsninja.com/demo/")
     driver.implicitly_wait(10)

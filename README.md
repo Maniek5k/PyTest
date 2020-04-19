@@ -9,6 +9,8 @@ Tests are run by PyTest automatically (to run just enter /tests folder and type 
 To run it you need to run command, having your docker installed:
     docker run maniek5k/pytest
 
+This will download DOCKER image and run tests automatically, so you can see main functionality, logger, test results without needing to download this repository and running it by yourself (all necessary packages like Chrome, ChromeDriver, Selenium are included). So it's working out-of-the-box solution for testing!
+
 # At current state following tests are available:
 
 - Login - success
