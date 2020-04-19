@@ -9,8 +9,8 @@ script:
 # - make test
 #   TESTS ARE DISABLED ON TRAVIS DUE TO CI/CD - preventing from spamming test website with lots of tests
 on:
-    branch: master
-    condition: $TRAVIS_BRANCH = master
+    branch: staging
+    condition: $TRAVIS_BRANCH = staging
 deploy:
 - make docker_build
 - make docker_push
