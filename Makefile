@@ -7,8 +7,8 @@ TAG=$(USERNAME)/$(MY_DOCKER_NAME)
 
 deps:
 	pip install -r requirements.txt
-	wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-	sudo apt install ./google-chrome-stable_current_amd64.deb
+	# wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+	# sudo apt install ./google-chrome-stable_current_amd64.deb
 	webdrivermanager chrome --linkpath AUTO
 	python3 -V
 	chromedriver --version
