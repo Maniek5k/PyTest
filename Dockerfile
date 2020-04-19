@@ -4,5 +4,6 @@ WORKDIR /tmp
 ADD requirements.txt /tmp/requirements.txt
 RUN pip install -r /tmp/requirements.txt
 RUN mkdir -p $APP_DIR
+ADD tests/ $APP_DIR/tests/
 CMD PYTHONPATH=$PYTHONPATH:/usr/src/pytest \
-    pytest tests/
+    pytest ../pytest-selenium/tests/
