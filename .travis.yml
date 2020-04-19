@@ -2,8 +2,8 @@ language: python
 
 services:
 - docker
-# install:
-# - make deps
+install:
+- make deps
 script:
 - make lint
 # - make test

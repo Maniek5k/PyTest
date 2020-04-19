@@ -8,17 +8,17 @@ from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import logging
-from pyvirtualdisplay import Display
 
 LOGGER = logging.getLogger(__name__)
 
 
 @pytest.fixture(scope="class")
 def driver_init(request):
-    display = Display(visible=0, size=(800, 800))  
-    display.start()
     options = webdriver.ChromeOptions()
     options.add_argument('headless')
+    options.add_argument('no-cache')
+    options.add_argument('no-sandbox')
+    options.add_argument('disable-dev-shm-usage')
     driver = webdriver.Chrome(options=options)
     request.cls.driver = driver
     driver.get("http://tutorialsninja.com/demo/")
