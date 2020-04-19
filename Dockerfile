@@ -3,7 +3,7 @@ ARG APP_DIR=/usr/src/pytest-selenium
 WORKDIR /tmp
 ADD requirements.txt /tmp/requirements.txt
 RUN pip install -r /tmp/requirements.txt \
-    apt-get update && \
+    apt-get update \
     apt-get -y install libnss3 \
     wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb \
     apt install -y ./google-chrome-stable_current_amd64.deb \
