@@ -1,39 +1,18 @@
 language: python
 
-# services:
-# - docker
-# install:
-# - make deps
-# script:
-# - make lint
-# # - make test
-# deploy:
-# - make docker_build
-# - make docker_push
-#     on:
-#         branch: master
-
-jobs:
-  include:
-    - stage: dockerize
-        services:
-            - docker
-
-    - stage: test
-        install:
-            - make deps
-
-    - stage: test
-      if: branch = staging
-      name: "Deploy to staging S3"
-      script: 
-        - make lint
-        # - make test
-
-    - stage: deploy-prod
-      if: branch = master
-      name: "Deploy to production S3"
-      script: skip
-      deploy:
-        - make docker_build
-        - make docker_push
+services:
+- docker
+install:
+- make deps
+script:
+- make lint
+# - make test
+    on:
+        branch: staging
+        condition: $TRAVIS_BRANCH = staging
+deploy:
+- make docker_build
+- make docker_push
+    on:
+        branch: master
+        condition: $TRAVIS_BRANCH = master
