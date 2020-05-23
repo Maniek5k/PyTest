@@ -8,9 +8,6 @@ script:
 - make lint
 # - make test
 #   TESTS ARE DISABLED ON TRAVIS DUE TO CI/CD - preventing from spamming test website with lots of tests
-on:
-    branch: staging
-    condition: $TRAVIS_BRANCH = staging
 script:
 - make docker_push
 on:
