@@ -17,6 +17,7 @@ deps:
 lint:
 	flake8 tests
 	black tests
+	radon cc tests
 test:
 	PYTHONPATH=. py.test --verbose -s
 
