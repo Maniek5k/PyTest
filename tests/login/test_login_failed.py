@@ -15,4 +15,6 @@ class TestLoginFailed(Base):
 
         services.assert_and_click(self, By.CSS_SELECTOR, login.login_submit)
 
-        services.assert_text(self, By.CSS_SELECTOR, login.login_alert, login.login_fail_msg)
+        services.assert_text(
+            self, By.CSS_SELECTOR, login.login_alert, login.login_fail_msg
+        )

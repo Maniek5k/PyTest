@@ -13,5 +13,9 @@ class TestBasketCannotAdd(Base):
 
         services.assert_and_click(self, By.XPATH, basket.basket_add)
 
-        services.assert_text(self, By.CSS_SELECTOR, basket.basket_cannot_alert, basket.basket_cannot_alert_text)
-
+        services.assert_text(
+            self,
+            By.CSS_SELECTOR,
+            basket.basket_cannot_alert,
+            basket.basket_cannot_alert_text,
+        )

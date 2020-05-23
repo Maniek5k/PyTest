@@ -13,7 +13,9 @@ class TestCheckout(Base):
     def test_checkout(self):
         self.driver.get(login.login_url)
 
-        services.send_keys_by_xpath(self, login.login_mail_input, checkout.checkout_mail)
+        services.send_keys_by_xpath(
+            self, login.login_mail_input, checkout.checkout_mail
+        )
 
         login.check_login(self)
 
@@ -33,7 +35,12 @@ class TestCheckout(Base):
 
         services.assert_and_click(self, By.XPATH, checkout.checkout_payment_method)
 
-        services.assert_text(self, By.CSS_SELECTOR, checkout.checkout_alert_checkbox, checkout.checkout_alert_msg)
+        services.assert_text(
+            self,
+            By.CSS_SELECTOR,
+            checkout.checkout_alert_checkbox,
+            checkout.checkout_alert_msg,
+        )
 
         services.assert_and_click(self, By.NAME, checkout.checkout_checkbox)
 
@@ -42,7 +49,12 @@ class TestCheckout(Base):
         services.assert_and_click(self, By.XPATH, checkout.checkout_confirm)
 
         services.wait_for_title(self, checkout.checkout_placed_title)
-        services.assert_text(self, By.XPATH, checkout.checkout_order_placed, checkout.checkout_order_placed_msg)
+        services.assert_text(
+            self,
+            By.XPATH,
+            checkout.checkout_order_placed,
+            checkout.checkout_order_placed_msg,
+        )
 
         self.driver.get(login.login_url)
 

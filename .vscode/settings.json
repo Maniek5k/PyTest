@@ -1,5 +1,5 @@
 {
-    "python.pythonPath": "/usr/bin/python3.8",
+    "python.pythonPath": "/home/mike/Desktop/tester/pytest/PyTest/.venv/bin/python3",
     "python.testing.pytestArgs": [
         "tests"
     ],

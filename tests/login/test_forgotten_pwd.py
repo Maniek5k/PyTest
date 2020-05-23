@@ -15,7 +15,9 @@ class TestForgottenPwd(Base):
 
         services.assert_and_click(self, By.CSS_SELECTOR, login.login_submit)
 
-        services.assert_text(self, By.CSS_SELECTOR, login.login_alert, login.login_forgotten_msg_alert)
+        services.assert_text(
+            self, By.CSS_SELECTOR, login.login_alert, login.login_forgotten_msg_alert
+        )
 
         services.clear_element_by_xpath(self, login.login_mail_input)
 
@@ -23,4 +25,6 @@ class TestForgottenPwd(Base):
 
         services.assert_and_click(self, By.CSS_SELECTOR, login.login_submit)
 
-        services.assert_text(self, By.CSS_SELECTOR, login.login_alert, login.login_forgotten_msg_success)
+        services.assert_text(
+            self, By.CSS_SELECTOR, login.login_alert, login.login_forgotten_msg_success
+        )

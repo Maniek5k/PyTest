@@ -15,4 +15,6 @@ class TestRegisterPP(Base):
 
         services.assert_and_click(self, By.CSS_SELECTOR, register.register_submit)
 
-        services.assert_text(self, By.CSS_SELECTOR, register.register_alert, register.register_policy)
+        services.assert_text(
+            self, By.CSS_SELECTOR, register.register_alert, register.register_policy
+        )

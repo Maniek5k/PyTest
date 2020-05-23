@@ -1,1 +1,5 @@
 *.pyc
+.pytest_cache/
+.venv/
+google-chrome-stable_current_amd64.deb
+.vscode/settings.json

@@ -10,7 +10,9 @@ class TestNewsletter(Base):
     def test_newsletter(self):
         self.driver.get(login.login_url)
 
-        services.send_keys_by_xpath(self, login.login_mail_input, account.account_mail_newsletter)
+        services.send_keys_by_xpath(
+            self, login.login_mail_input, account.account_mail_newsletter
+        )
 
         login.check_login(self)
 

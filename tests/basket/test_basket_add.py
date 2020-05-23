@@ -22,4 +22,6 @@ class TestBasketAdd(Base):
 
         services.assert_and_click(self, By.CSS_SELECTOR, basket.basket_remove)
 
-        services.assert_text(self, By.XPATH, basket.basket_empty, basket.basket_empty_text)
+        services.assert_text(
+            self, By.XPATH, basket.basket_empty, basket.basket_empty_text
+        )

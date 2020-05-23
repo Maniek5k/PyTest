@@ -13,7 +13,9 @@ class TestReturn(Base):
     def test_return(self):
         self.driver.get(login.login_url)
 
-        services.send_keys_by_xpath(self, login.login_mail_input, checkout.checkout_return_email)
+        services.send_keys_by_xpath(
+            self, login.login_mail_input, checkout.checkout_return_email
+        )
 
         login.check_login(self)
 
@@ -25,12 +27,19 @@ class TestReturn(Base):
 
         services.assert_and_click(self, By.CSS_SELECTOR, checkout.return_submit)
 
-        services.assert_text(self, By.CSS_SELECTOR, checkout.return_necessary_option, checkout.return_option_text)
+        services.assert_text(
+            self,
+            By.CSS_SELECTOR,
+            checkout.return_necessary_option,
+            checkout.return_option_text,
+        )
 
         services.assert_and_click(self, By.NAME, checkout.return_radio)
 
         services.assert_and_click(self, By.CSS_SELECTOR, checkout.return_submit)
 
-        services.assert_text(self, By.XPATH, checkout.return_success, checkout.return_success_text)
+        services.assert_text(
+            self, By.XPATH, checkout.return_success, checkout.return_success_text
+        )
 
         login.check_logout(self)

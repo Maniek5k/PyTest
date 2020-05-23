@@ -1,7 +1,5 @@
 # Test for adding previously ordered product to basket
 
-import time
-
 from selenium.webdriver.common.by import By
 
 from conftest import Base
@@ -32,7 +30,9 @@ class TestBasketReorder(Base):
 
         services.is_element_visible(self, By.XPATH, basket.basket_empty)
 
-        services.assert_text(self, By.XPATH, basket.basket_empty, basket.basket_empty_text)
+        services.assert_text(
+            self, By.XPATH, basket.basket_empty, basket.basket_empty_text
+        )
 
         self.driver.get(login.login_url)
 

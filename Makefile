@@ -15,7 +15,8 @@ deps:
 	chromedriver --version
 	google-chrome-stable --version
 lint:
-	flake8 hello_world test
+	flake8 tests
+	black tests
 test:
 	PYTHONPATH=. py.test --verbose -s
 

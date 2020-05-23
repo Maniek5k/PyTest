@@ -24,22 +24,32 @@ class TestAddAddress(Base):
 
         services.send_keys_by_xpath(self, account.account_company, account.account_data)
 
-        services.send_keys_by_xpath(self, account.account_address1, account.account_data)
+        services.send_keys_by_xpath(
+            self, account.account_address1, account.account_data
+        )
 
-        services.send_keys_by_xpath(self, account.account_address2, account.account_data)
+        services.send_keys_by_xpath(
+            self, account.account_address2, account.account_data
+        )
 
         services.send_keys_by_xpath(self, account.account_city, account.account_data)
 
-        services.send_keys_by_xpath(self, account.account_postcode, account.account_data_postcode)
+        services.send_keys_by_xpath(
+            self, account.account_postcode, account.account_data_postcode
+        )
 
         services.assert_and_click(self, By.XPATH, account.account_region_select)
 
         services.assert_and_click(self, By.CSS_SELECTOR, account.account_submit)
 
-        services.assert_text(self, By.CSS_SELECTOR, account.account_success, account.account_added_text)
+        services.assert_text(
+            self, By.CSS_SELECTOR, account.account_success, account.account_added_text
+        )
 
         services.assert_and_click(self, By.CSS_SELECTOR, account.account_delete)
 
-        services.assert_text(self, By.CSS_SELECTOR, account.account_success, account.account_deleted_text)
+        services.assert_text(
+            self, By.CSS_SELECTOR, account.account_success, account.account_deleted_text
+        )
 
         login.check_logout(self)
