@@ -3,3 +3,4 @@ selenium
 webdrivermanager
 flake8
 black
+radon
