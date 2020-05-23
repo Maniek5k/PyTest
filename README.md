@@ -1,8 +1,12 @@
+[![Build Status](https://travis-ci.org/Maniek5k/PyTest.svg?branch=master)](https://travis-ci.org/Maniek5k/PyTest)
+
 # This repository contains tests of http://tutorialsninja.com/demo/ website.
 
 All tests are written using PyTest framework, also tests includes custom info logging about every step.
 
 Tests are run by PyTest automatically (to run just enter /tests folder and type in terminal: pytest)
+
+Whole repository is meant to be built automatically by Travis-CI (on staging branch) and then deployed on merge to master branch as Docker Image. 
 
 # Whole repository is available as DOCKER IMAGE!
 
