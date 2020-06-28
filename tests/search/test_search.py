@@ -17,10 +17,10 @@ class TestSearchSuccess(Base):
             self, By.LINK_TEXT, search.search_result, search.search_case
         )
 
-        services.clear_element_by_xpath(self, search.search_input)
+        # services.clear_element_by_xpath(self, search.search_input)
 
-        services.assert_and_click(self, By.XPATH, search.search_submit)
+        # services.assert_and_click(self, By.XPATH, search.search_submit)
 
-        services.assert_text(
-            self, By.XPATH, search.search_failed, search.search_failed_msg
-        )
+        # services.assert_text(
+        #     self, By.XPATH, search.search_failed, search.search_failed_msg
+        # )

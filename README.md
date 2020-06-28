@@ -1,6 +1,7 @@
 [![Build Status](https://travis-ci.org/Maniek5k/PyTest.svg?branch=master)](https://travis-ci.org/Maniek5k/PyTest)
 
 # This repository contains tests of http://tutorialsninja.com/demo/ website.
+Note: Sorry for downtime of my desired website, I'm not responsible for database being down there.
 
 All tests are written using PyTest framework, also tests includes custom info logging about every step.
 
