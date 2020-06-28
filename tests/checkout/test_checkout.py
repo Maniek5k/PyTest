@@ -9,7 +9,7 @@ from pages.page_login import login
 
 
 class TestCheckout(Base):
-    @pytest.mark.skip(reason="Checkout shouldn't be tested in a suite")
+    # @pytest.mark.skip(reason="Checkout shouldn't be tested in a suite")
     def test_checkout(self):
         self.driver.get(login.login_url)
 

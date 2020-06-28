@@ -15,7 +15,7 @@ LOGGER = logging.getLogger(__name__)
 @pytest.fixture(scope="class")
 def driver_init(request):
     options = webdriver.ChromeOptions()
-    options.add_argument('headless')
+    # options.add_argument('headless')
     options.add_argument('no-cache')
     options.add_argument('no-sandbox')
     options.add_argument('disable-dev-shm-usage')
