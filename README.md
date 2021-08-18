@@ -9,6 +9,7 @@ Tests are run by PyTest automatically (to run just enter /tests folder and type 
 
 Whole repository is meant to be built automatically by Travis-CI (on staging branch) and then deployed on merge to master branch as Docker Image. 
 
+
 # Whole repository is available as DOCKER IMAGE!
 
 To run it you need to run command, having your docker installed:
