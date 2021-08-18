@@ -4,8 +4,8 @@ services:
 - docker
 install:
 - make deps
-script:
 - make lint
+script:
 # - make test
 #   TESTS ARE DISABLED ON TRAVIS DUE TO CI/CD - preventing from spamming test website with lots of tests
 script:

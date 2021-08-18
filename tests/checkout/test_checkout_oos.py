@@ -1,12 +1,13 @@
 # Test for checking checkout process with out of stock product
-
+import pytest
 from selenium.webdriver.common.by import By
 
 from conftest import Base, services
 from pages.page_basket import basket
 
 
-class TestCheckout(Base):
+class TestCheckoutOOS(Base):
+    @pytest.mark.skip(reason="Currently no OOS products on store")
     def test_checkout(self):
         self.driver.get(basket.basket_oos_pp)
 
